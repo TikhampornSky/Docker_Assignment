@@ -39,3 +39,4 @@ services:
 
     db:
         build: user_data
+        container_name: user_data
