@@ -8,3 +8,4 @@ ENV MYSQL_PASSWORD 123
 ADD ABCompany.sql /docker-entrypoint-initdb.d
 
 ENV TZ Asia/Bangkok
+

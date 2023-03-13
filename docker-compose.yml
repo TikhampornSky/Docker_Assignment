@@ -39,4 +39,8 @@ services:
 
     db:
         build: user_data
-        container_name: user_data
+        container_name: db
+        expose:
+        - "3306"
+        ports:
+        - "6002:3306"
