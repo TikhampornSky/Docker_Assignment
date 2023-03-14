@@ -4,7 +4,7 @@ services:
     asset_mapping:
         build: asset_mapping
         ports:
-            - "28017:28017"
+            - "28017:27017"
 
     asset_mapping_seed:
         build: asset_mapping_seed
@@ -39,8 +39,3 @@ services:
 
     db:
         build: user_data
-        container_name: db
-        expose:
-        - "3306"
-        ports:
-        - "6002:3306"

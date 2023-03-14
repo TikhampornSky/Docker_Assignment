@@ -18,12 +18,20 @@ process.on('unhandledRejection', function(err, promise){
   console.error('Unhandled Rejection', err);
 });
 
+console.log({
+  host: config.db.host,
+  database: config.db.database,
+  user: config.db.user,
+  password: config.db.password,
+  port: 6002 || config.db.port
+});
+
 repository.connect({
   host: config.db.host,
   database: config.db.database,
   user: config.db.user,
   password: config.db.password,
-  port: config.db.port
+  port: 6002 || config.db.port
 }).then((repo) => {
   console.log("Connected. Starting server...");
 
